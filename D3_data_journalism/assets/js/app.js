@@ -78,7 +78,7 @@ d3.csv("assets/data/data.csv").then(function (data) {
         .attr("class", "tooltip")
         .offset([80, -60])
         .html(function (d) {
-            return (`${d.state}, Poverty: ${d.poverty}, Lack Healthcare: ${d.healthcare}`)
+            return (`State: ${d.state}<br>Poverty: ${d.poverty}%<br> Lack Healthcare: ${d.healthcare}%`);
         })
 
     // Step 7: Create tooltip in the chart    
@@ -106,7 +106,7 @@ d3.csv("assets/data/data.csv").then(function (data) {
     // ==============================
 
     circleGroup.on("mouseover", function (data) {
-        toolTip.show(data, this);
+        toolTip.show(data, this)
     })
 
     circleGroup.on("mouseout", function (data) {
