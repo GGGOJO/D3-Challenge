@@ -74,7 +74,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
         .offset([80, -60])
         .html(function (d) {
             if (chosenXAxis === "poverty") {
-                return (`${d.state}<br>${label} ${d[chosenXAxis]}%<br>Poverty ${d.poverty}%`);
+                return (`${d.state}<br>${label} ${d[chosenXAxis]}%<br>Lacks Healthcare ${d.healthcare}%`);
             }
             else {
                 return (`${d.state}<br>${label} ${d[chosenXAxis]}%<br>Lacks Healthcare ${d.healthcare}%`);
